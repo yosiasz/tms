@@ -1,7 +1,7 @@
 'use strict';
 
 /* Directives */
-var app = angular.module('harborwitnessingApp',[])
+var app = angular.module('tmsapp',[])
 
 app.directive('focus', function() {
     return function(scope, element) {
