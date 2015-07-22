@@ -1,24 +1,5 @@
 /* 
-PASSPORT:
-	http://scotch.io/tutorials/javascript/easy-node-authentication-setup-and-local
-	https://vickev.com/#!/article/authentication-in-single-page-applications-node-js-passportjs-angularjs
-	https://github.com/jaredhanson/passport-local
-	http://passportjs.org/guide/profile/
-
-EXPRESS
-	http://stackoverflow.com/questions/18805054/what-is-the-proper-way-to-log-in-users-using-angular-express
-	http://www.kdelemme.com/2014/03/09/authentication-with-angularjs-and-a-node-js-rest-api/
-	http://code.tutsplus.com/tutorials/token-based-authentication-with-angularjs-nodejs--cms-22543
-
-http://scotch.io/tutorials/javascript/easy-node-authentication-setup-and-local
-
-http://danialk.github.io/blog/2013/02/23/authentication-using-passportjs/
-
-http://codeforgeek.com/2014/09/manage-session-using-node-js-express-4/
-
-
-BEST
-	https://www.youtube.com/watch?v=yvviEA1pOXw
+WORK IN PROGRESS
  */
 var mysql = require('mysql'), 
     express = require('express'),
@@ -40,14 +21,6 @@ app.use(multer()); // for parsing multipart/form-data
 
 //app.use(express.static('public'));
 
-/* app.use(session({
-    secret: 'ilovescotchscotchyscotchscotch',
-    name: 'authhw',
-    proxy: true,
-    resave: true,
-    saveUninitialized: true
-})); */
-
 app.set('view engine', 'ejs'); // set up ejs for templating
 
 //app.use(morgan('dev')); // log every request to the console
@@ -61,11 +34,11 @@ app.set('view engine', 'html'); // set up ejs for templating
 
   
  var connection = mysql.createConnection({
-    host: '10.0.0.10',
-    user: 'witnessingapp',
-    password : 'Semrina77',
+    host: '',
+    user: '',
+    password : '',
 	port : 3306, 
-    database: 'witnessing'
+    database: 'tms'
 }); 
 
 app.all('*',
