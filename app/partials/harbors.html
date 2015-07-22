@@ -1,0 +1,31 @@
+ <div ng-controller="harborsController">
+    <form class="well">
+        <label>Harbor Name</label>
+        <input type="text" name="harborname" ng-model="newharbor.harborname" />
+        <br/>
+        <input type="hidden" ng-model="newharbor.harborid" />
+        <input type="button" value="Save" ng-click="saveHarbor()" class="btn btn-primary" />
+    </form>
+	<div>
+        <label>Search Harbor Name</label> 
+        <input type="text" name="harborname" ng-model="searchText" />
+	</div>
+	
+    <table class="table table-striped table-bordered">
+        <thead>
+            <tr>
+                <th>Harbor Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="harbor in harbors | filter:searchText">
+                <td>{{ harbor.harborname }}</td>
+                <td> 
+                    <a href="javascript:void(0)" ng-click="edit(harbor.harborid)">edit</a> | 
+                    <a href="javascript:void(0)" ng-click="delete(harbor.harborid)">delete</a>
+
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

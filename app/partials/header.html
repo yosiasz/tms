@@ -1,0 +1,17 @@
+<div class="container" id="header">
+    <!-- With menu-highlighter directive -->
+    <ul class="nav navbar-nav nav-pills navBarPadding "
+        data-menu-highlighter data-highlight-class-name="active">
+        <li><a href="#/home">Home</a></li>
+        <li><a href="#/login">Login</a></li>
+        <li><a href="#/schedules">Schedules</a></li>
+        <li><a href="#/persons">Volunteers</a></li>
+        <li><a href="#/vessels">Vessels</a></li>
+        <li><a href="#/harbors">Harbors</a></li>
+        <li><a href="#/about">About</a></li>
+        <li id="nav-login" data-ng-click="loginOrOut()">
+             <!--href not used but needed to compare against path in menu-highlighter  -->
+            <a data-href="#/login">{{ loginLogoutText }}</a>
+        </li>
+    </ul>
+</div>
