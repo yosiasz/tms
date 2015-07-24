@@ -1,0 +1,28 @@
+{
+  "name": "tms",
+  "version": "1.0.0",
+  "description": "School Scheduling",
+  "main": "server.js",
+  "scripts": {
+    "test": "npm run test",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yosiasz/tms.git"
+  },
+  "keywords": [
+    "School",
+    "Scheduling"
+  ],
+  "author": "Josiah Solomon",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yosiasz/tms/issues"
+  },
+  "homepage": "https://github.com/yosiasz/tms",
+  "dependencies": {
+    "connect": "^3.4.0",
+    "serve-static": "^1.10.0"
+  }
+}
