@@ -1,4 +1,4 @@
-var app = angular.module('tmsapp', ['ngRoute','ui.calendar', 'ui.bootstrap']);
+var app = angular.module('appTms', ['ngRoute','ui.calendar', 'ui.bootstrap']);
  
 //This configures the routes and associates each route with a view and a controller
 //partials are also called views?
@@ -14,11 +14,6 @@ app.config(function ($routeProvider) {
             {
                 controller: 'authController',
                 templateUrl: '/app/partials/login.html'
-            })
-        .when('/harbors',
-            {
-                controller: 'harborsController',
-                templateUrl: '/app/partials/harbors.html'
             })
         .when('/schedules',
             {
@@ -51,23 +46,16 @@ app.config(function ($routeProvider) {
             controller: 'authCtrl'
         })    
         //Define a route that has a route parameter in it (:personid)
-        .when('/persons/:personid',
+        .when('/students/:studentid',
             {
-                controller: 'personController',
-                templateUrl: '/app/partials/personDetails.html'
+                controller: 'studentController',
+                templateUrl: '/app/partials/studentDetails.html'
             })
-        .when('/persons',
+        .when('/students',
             {
                 controller: 'personsController',
-                templateUrl: '/app/partials/persons.html'
+                templateUrl: '/app/partials/students.html'
             })        
-
-        //Define a route that has a route parameter in it (:customerID)
-        .when('/vessels',
-            {
-                controller: 'shipsController',
-                templateUrl: '/app/partials/vessels.html'
-            })
         .otherwise({ redirectTo: '/' });
 })
 

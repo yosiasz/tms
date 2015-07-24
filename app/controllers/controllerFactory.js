@@ -1,4 +1,4 @@
-var hw = angular.module('tmsapp')
+var hw = angular.module('appTms')
 
 hw.controller("calendarController", function($scope) {
     $scope.day = moment();
